@@ -1,0 +1,41 @@
+<!--博客模板-->
+<div class="blog container">
+    <div class='line'>
+        <ol class="breadcrumb">
+            <li><a href="javascript:;">最新文章</a></li>
+            <li><a href="javascript:;">热门文章</a></li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="media" ng-repeat='items in result'>
+            <div class="media-left media-middle">
+                <a href="javascript:;">
+                    <img class="media-object img-circle" ng-src="{{items.imgUrl}}" alt="">
+                </a>
+            </div>
+            <div class="media-body">
+                <div class="media_right fr">
+                    <button type='button' class='btn btn-success'>笔记</button>
+                    <button type='button' class='btn btn-info'>感悟</button>
+                </div>
+                <h4 class="media-heading">{{items.title}}</h4>
+
+                <p>最近由 <a href='javascript:;'>{{items.urser}}</a>更新于<i>{{items.time}}</i>小时前</p>
+            </div>
+        </div>
+        <nav class='numPage' aria-label="...">
+            <ul class="pagination">
+                <li class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li navactive class="active" ng-click='pageChange(1)'><a href="javascript:;">1</a></li>
+                <li navactive ng-repeat='items in pagenum' ng-click='pageChange(items)'><a href="javascript:;">{{items}}</a></li>
+                <li navactive class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
+            </ul>
+        </nav>
+        <nav class='easyPage' aria-label="...">
+            <ul class="pager">
+                <li ng-click='getPageprev(pageindex-1)'><a href="javascript:;">上一页</a></li>
+                <li ng-click='getPagenext(pageindex+1)'><a href="javascript:;">下一页</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

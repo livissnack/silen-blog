@@ -1,0 +1,62 @@
+<!--问答模板-->
+<div class="answer">
+    <div class="container">
+     <div class="row">
+            <div class="col-md-9">
+                <div class="media" ng-repeat='items in result'>
+                    <div class="media-body">
+                        <div class="media_right fr">
+                            <span class="label label-danger ">服务器</span>
+                            <span class="label label-success">服务器</span>
+                            <span class="badge">33</span>
+                        </div>
+                        <h4 class="media-heading">{{items.title}}</h4>
+                        <p><i class='glyphicon glyphicon-flag'></i><a href="javascript:;">{{items.user}}</a> 发表于 <i>{{items.time}} </i>小时前</p>
+                        <p>{{items.content}}</p>
+                    </div>
+                </div>
+                <nav class='numPage' aria-label="...">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                        <li navactive class="active" ng-click='pageChange(1)'><a href="javascript:;">1</a></li>
+                        <li navactive ng-repeat='items in pagenum' ng-click='pageChange(items)'><a href="javascript:;">{{items}}</a></li>
+                        <li navactive class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&raquo;</span></a></li>
+                    </ul>
+                </nav>
+                <nav class='easyPage' aria-label="...">
+                    <ul class="pager">
+                        <li ng-click='getPageprev(pageindex-1)' ><a href="javascript:;">上一页</a></li>
+                        <li ng-click='getPagenext(pageindex+1)' ><a href="javascript:;">下一页</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-3">
+                <div class="jumbotron">
+                    <h1>订阅新闻</h1>
+                    <div class='recommend'>每周推送，让你不会错过任何关于 FlipTack的重要信息。</div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Email...">
+                          <span class="input-group-btn">
+                            <button class="btn" type="button">订阅</button>
+                          </span>
+                    </div>
+                </div>
+                <div class="intro">
+                    <div class="to">
+                        友情链接
+                    </div>
+                    <ul>
+                        <li><a href="http://www.w3school.com.cn/" class='btn'>W3School</a></li>
+                        <li><a href="https://github.com/" class='btn'>Github社区</a></li>
+                        <li><a href="https://juejin.im/" class='btn'>Juejin</a></li>
+                        <li><a href="https://SegmentFault.com/" class='btn'>SegmentFault</a></li>
+                        <li><a href="https://developer.mozilla.org/zh-CN/" class='btn'>Mozilla</a></li>
+                        <li><a href="http://v3.bootcss.com/" class='btn'>Bootstrap</a></li>
+                        <li><a href="https://cn.vuejs.org/" class='btn'>Vuejs</a></li>
+                        <li><a href="https://angularjs.org/" class='btn'>angularJs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

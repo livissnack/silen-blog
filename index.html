@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="dist/css/font-awesome.css"/>
+    <link rel="stylesheet" href="dist/lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="dist/css/index.css"/>
+</head>
+<body ng-app='blog'>
+<!--导航栏-->
+<nav id='naver' class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" animate>FlipTack</a>
+        </div>
+        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1" ng-controller='blogCtrl'>
+            <ul class="nav navbar-nav">
+                <li class='active' navactive><a href="#/home">首页</a></li>
+                <li navactive><a href="#/news">新闻</a></li>
+                <li navactive><a href="#/answer">问答</a></li>
+                <li navactive><a href="#/blog">博客</a></li>
+                <li navactive><a href='#/VR'>VR</a></li>
+                <li navactive><a href="#/physon">人工智能</a></li>
+            </ul>
+            <div class="input-group hidden-sm hidden-xs fl">
+                <input type="text" class="form-control" placeholder="Email...">
+                  <span class="input-group-btn">
+                    <button class="btn" type="button">搜索</button>
+                  </span>
+            </div>
+            <ul class="nav navbar-nav navbar-right ">
+                <li>
+                    <button  class='btn loginin'><a href='#/login'>登录</a></button>
+                </li>
+                <li>
+                    <button  class='btn register'><a href='#/register'>注册</a></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--导航结束-->
+<!--主要内容-->
+<div id='main' ng-view></div>
+<!--主要内容结束-->
+<!--底部版权-->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <a class='col-xs-4 col-sm-2 col-md-2' href="javascript:;" role="button">新闻资讯</a>
+            <a class='col-xs-4 col-sm-2 col-md-2' href="javascript:;" role="button">问答社区</a>
+            <a class='col-xs-4 col-sm-2 col-md-2' href="javascript:;" role="button">个人博客</a>
+            <a class='col-xs-4 col-sm-2 col-md-2' href="javascript:;" role="button">友情链接</a>
+            <a class='col-xs-4 col-sm-2 col-md-2' href="javascript:;" role="button">中文文档 </a>
+            <a class='col-xs-4 col-sm-2 col-md-2' href="javascript:;" role="button">版权声明</a>
+        </div>
+        <p>
+            <a href="https://m.facebook.com/"><i class='icon-facebook-sign aria-hidden="true"'></i></a>
+            <a href="https://www.instagram.com/"><i class='icon-linkedin-sign aria-hidden="true"'></i></a>
+            <a href="https://github.com/"><i class='icon-github-alt aria-hidden="true"'></i></a>
+        </p>
+        <p>@FlipTack   sz-Silen</p>
+        <hr/>
+        <p>FlipTack | 生命不息,创造不止</p>
+    </div>
+</div>
+<!--底部版权-->
+</body>
+<script src="dist/lib/jquery.min.js"></script>
+<script src="dist/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./node_modules/angular/angular.min.js"></script>
+<script src="./node_modules/angular-route/angular-route.min.js"></script>
+<script src="dist/js/common.js"></script>
+<script src="login/login.js"></script>
+<script src="register/register.js"></script>
+<script src="vr/vr.js"></script>
+<script src="python/python.js"></script>
+<script src="news/news.js"></script>
+<script src="home/home.js"></script>
+<script src="blog/blog.js"></script>
+<script src="answer/answer.js"></script>
+<script src="index.js"></script>
+</html>

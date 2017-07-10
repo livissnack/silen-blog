@@ -1,0 +1,70 @@
+/**
+ * Created by Silen on 2017/7/8.
+ */
+(function(angular){
+    var blog=angular.module('blog_blog',['blog_common','ngRoute']);
+    blog.config(['$routeProvider',function($routeProvider){
+        $routeProvider.when('/blog',{
+            templateUrl:'./blog/blog.html',
+            controller:'blogCtrl'
+        })
+    }])
+    blog.controller('blogCtrl',['$scope','$http',function($scope,$http){
+        $http({
+            url:"../Blog/blogdatas.json",
+            method:'get',
+        }).then(function(response){
+            //默认展示第一页内容
+            $scope.result=response.data.data.slice(0,8);
+            $scope.$applyAsync();
+            //设置分页页数
+            var pageNum=response.data.total/response.data.data.slice(0,8).length;
+            $scope.page=function(){
+                var pageNumArr=[];
+                for(var i= 2;i<=pageNum;i++){
+                    pageNumArr[pageNumArr.length]=i;
+                }
+                return pageNumArr;
+            }
+            $scope.pagenum=$scope.page();
+            //设置数字型分页的分页功能
+            $scope.pageChange=function(items){
+                $http({
+                    url:"../Blog/blogdatas.json",
+                    method:'get',
+                }).then(function(response){
+                    $scope.result=response.data.data.slice((items-1)*8,items*8);
+                    $scope.$applyAsync();
+                })
+            }
+            //手机屏幕使用的胶囊分页时的分页功能
+            $scope.pageindex=1;
+            $scope.getPagenext=function(pageindex){
+                if(pageindex>pageNum||pageindex<1){
+                    return;
+                }
+                $http({
+                    url:"../Blog/blogdatas.json",
+                    method:'get',
+                }).then(function(response){
+                    $scope.result=response.data.data.slice((pageindex-1)*8,pageindex*8);
+                    $scope.$applyAsync();
+                    $scope.pageindex++;
+                })
+            }
+            $scope.getPageprev=function(pageindex){
+                if(pageindex>pageNum||pageindex<1){
+                    return;
+                }
+                $http({
+                    url:"../Blog/blogdatas.json",
+                    method:'get',
+                }).then(function(response){
+                    $scope.result=response.data.data.slice((pageindex-1)*8,pageindex*8);
+                    $scope.$applyAsync();
+                    $scope.pageindex--;
+                })
+            }
+        })
+    }])
+})(angular)
