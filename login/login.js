@@ -11,10 +11,10 @@
     }])
     login.controller('loginCtrl',['$scope','$window',function($scope,$window){
         $scope.loginClick=function(){
-            $window.location='../Blog/index.html#/home';
+            $window.location='../../index.html#/home';
         }
         $scope.signupclick=function(){
-            $window.location='../Blog/index.html#/register';
+            $window.location='../../index.html#/register';
         }
     }])
 })(angular)

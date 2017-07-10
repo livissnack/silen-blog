@@ -13,10 +13,10 @@
     }])
     home.controller('homeCtrl', ['$scope','$http','$window', function ($scope,$http, $window) {
         $scope.register=function(){
-            $window.location='../Blog/index.html#/register'
+            $window.location='../../index.html#/register'
         }
         $http({
-            url:'../Blog/homedatas.json',
+            url:'../../homedatas.json',
             method:'get'
         }).then(function(response){
             $scope.result=response.data;

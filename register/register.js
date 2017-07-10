@@ -11,10 +11,10 @@
     }])
     register.controller('registerCtrl',['$scope','$window',function($scope,$window){
         $scope.registClick=function(){
-            $window.location='../Blog/index.html#/home';
+            $window.location='../../index.html#/home';
         }
         $scope.signinclick=function(){
-            $window.location='../Blog/index.html#/login';
+            $window.location='../../index.html#/login';
         }
     }])
 })(angular)
