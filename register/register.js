@@ -11,11 +11,11 @@
     }])
     register.controller('registerCtrl',['$scope','$window','$navtab',function($scope,$window,$navtab){
         $scope.registClick=function(){
-            $window.location='../../.././Blog/src/index.html#/home';
+            $window.location='./index.html#/home';
             $navtab.navtab();
         }
         $scope.signinclick=function(){
-            $window.location='../../.././Blog/src/index.html#/login';
+            $window.location='./index.html#/login';
             $navtab.navtab();
         }
     }])

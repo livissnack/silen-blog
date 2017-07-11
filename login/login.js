@@ -11,11 +11,11 @@
     }])
     login.controller('loginCtrl',['$scope','$window','$navtab',function($scope,$window,$navtab){
         $scope.loginClick=function(){
-            $window.location='../../.././Blog/src/index.html#/home';
+            $window.location='./index.html#/home';
             $navtab.navtab();
         }
         $scope.signupclick=function(){
-            $window.location='../../.././Blog/src/index.html#/register';
+            $window.location='./index.html#/register';
             $navtab.navtab();
         }
     }])

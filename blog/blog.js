@@ -11,7 +11,7 @@
     }])
     blog.controller('blogCtrl',['$scope','$http',function($scope,$http){
         $http({
-            url:"../../.././Blog/dist/datas/blogdatas.json",
+            url:"./dist/datas/blogdatas.json",
             method:'get',
         }).then(function(response){
             //默认展示第一页内容
@@ -30,7 +30,7 @@
             //设置数字型分页的分页功能
             $scope.pageChange=function(items){
                 $http({
-                    url:"../../.././Blog/dist/datas/blogdatas.json",
+                    url:"./dist/datas/blogdatas.json",
                     method:'get',
                 }).then(function(response){
                     $scope.result=response.data.data.slice((items-1)*8,items*8);
@@ -44,7 +44,7 @@
                     return;
                 }
                 $http({
-                    url:"../../.././Blog/dist/datas/blogdatas.json",
+                    url:"./dist/datas/blogdatas.json",
                     method:'get',
                 }).then(function(response){
                     $scope.result=response.data.data.slice((pageindex-1)*8,pageindex*8);
@@ -57,7 +57,7 @@
                     return;
                 }
                 $http({
-                    url:"../../.././Blog/dist/datas/blogdatas.json",
+                    url:"./dist/datas/blogdatas.json",
                     method:'get',
                 }).then(function(response){
                     $scope.result=response.data.data.slice((pageindex-1)*8,pageindex*8);
