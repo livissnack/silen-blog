@@ -1,6 +1,6 @@
 (function(angular){
     var common=angular.module('blog_common',[]);
-    //用于logo的动画效果
+    //锟斤拷锟斤拷logo锟侥讹拷锟斤拷效锟斤拷
     common.directive('animate',function(){
         return{
             restrict:'EA',
@@ -17,7 +17,7 @@
             }
         }
     })
-    //自定义指令用于导航栏tab切换变色
+    //锟皆讹拷锟斤拷指锟斤拷锟斤拷锟节碉拷锟斤拷锟斤拷tab锟叫伙拷锟斤拷色
     common.directive('navactive',function(){
         return{
             restrict:'EA',
@@ -29,7 +29,7 @@
             }
         }
     })
-    //jsonp的封装
+    //jsonp锟侥凤拷装
     common.service('$jsonp',['$window',function($window){
         this.jsonp=function(opts){
             var url =(opts.url+'?');
@@ -44,10 +44,13 @@
             $window.document.body.appendChild(script);
         }
     }])
-    //自定义指令用于替换分页标签禁用
-    common.directive('disableBtn',function(){
-
-    })
+    //鑷畾涔夌櫥褰曟敞鍐屾寜閽偣鍑讳細涓婚〉,瀵艰埅tab鑷姩鍒囨崲鑷充富椤电殑鏈嶅姟
+    common.service("$navtab",["$window",function($window){
+        this.navtab=function(){
+            $("a[href='#/home']").parent().siblings().removeClass('active');
+            $("a[href='#/home']").parent().addClass('active');
+        }
+    }])
 })(angular)
 
 

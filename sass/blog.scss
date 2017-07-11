@@ -113,7 +113,7 @@
             padding-top: 10px;
             color: #9ba6b5;
             i {
-              color: $commoncolor;
+              color: #337ab7;
             }
           }
         }
@@ -132,6 +132,7 @@
           background-color: #f5f5f5;
           color: $commoncolor;
           transition:all .5s;
+          border:1px solid $commoncolor;
           &:hover{
             background-color:$commoncolor;
             color:#f5f5f5;

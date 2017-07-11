@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$commoncolor".
-        on line 111 of G:\tools\projects\Blog\sass\answer.scss
+        on line 112 of G:\tools\projects\Blog\sass\answer.scss
 
-106:               }
-107:               .media-heading {
-108:                 color: #333;
-109:               }
-110:               .badge {
-111:                 background-color: $commoncolor;
-112:               }
-113:             }
-114:           }
-115:           nav.numPage {
-116:             text-align: center;
+107:               }
+108:               .media-heading {
+109:                 color: #333;
+110:               }
+111:               .badge {
+112:                 background-color: $commoncolor;
+113:               }
+114:             }
+115:           }
+116:           nav.numPage {
+117:             text-align: center;
 
 Backtrace:
-G:\tools\projects\Blog\sass\answer.scss:111
+G:\tools\projects\Blog\sass\answer.scss:112
 G:/tools/plugins/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
 G:/tools/plugins/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
 G:/tools/plugins/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
@@ -138,4 +138,4 @@ G:/tools/plugins/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$commoncolor\".\A         on line 111 of G:\tools\projects\Blog\sass\answer.scss\A \A 106:               }\A 107:               .media-heading {\A 108:                 color: #333;\A 109:               }\A 110:               .badge {\A 111:                 background-color: $commoncolor;\A 112:               }\A 113:             }\A 114:           }\A 115:           nav.numPage {\A 116:             text-align: center;"; }
+  content: "Error: Undefined variable: \"$commoncolor\".\A         on line 112 of G:\tools\projects\Blog\sass\answer.scss\A \A 107:               }\A 108:               .media-heading {\A 109:                 color: #333;\A 110:               }\A 111:               .badge {\A 112:                 background-color: $commoncolor;\A 113:               }\A 114:             }\A 115:           }\A 116:           nav.numPage {\A 117:             text-align: center;"; }
