@@ -6,5 +6,9 @@
     app.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
         $locationProvider.hashPrefix('');
     }])
-
+   app.controller('appCtrl',['$scope','$navtab',function($scope,$navtab){
+       $scope.indexClick=function(){
+           $navtab.navtab();
+       }
+   }])
 })(angular)

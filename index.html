@@ -38,12 +38,12 @@
                     <button class="btn" type="button">搜索</button>
                   </span>
             </div>
-            <ul class="nav navbar-nav navbar-right ">
+            <ul class="nav navbar-nav navbar-right " ng-controller='appCtrl'>
                 <li>
-                    <button  class='btn loginin'><a href='#/login'>登录</a></button>
+                    <button  class='btn loginin' ng-click='indexClick()'><a href='#/login'>登录</a></button>
                 </li>
                 <li>
-                    <button  class='btn register'><a href='#/register'>注册</a></button>
+                    <button  class='btn register' ng-click='indexClick()'><a href='#/register'>注册</a></button>
                 </li>
             </ul>
         </div>
@@ -69,7 +69,9 @@
             <a href="https://www.instagram.com/"><i class='icon-linkedin-sign aria-hidden="true"'></i></a>
             <a href="https://github.com/"><i class='icon-github-alt aria-hidden="true"'></i></a>
         </p>
-        <a href='https://github.com/zxlSilen'>@https://github.com/zxlSilen</a>
+        <a href='https://github.com/zxlSilen'>
+        由 zxlSilen 设计与编码
+        </a>
         <hr/>
         <p>FlipTack | 生命不息,创造不止</p>
     </div>

@@ -11,7 +11,7 @@
             redirectTo: '/home'
         })
     }])
-    home.controller('homeCtrl', ['$scope','$http','$window', function ($scope,$http,$window) {
+    home.controller('homeCtrl', ['$scope','$http','$window','$navtab',function ($scope,$http,$window,$navtab) {
         $scope.register=function(){
             $window.location='../../index.html#/register'
         }
